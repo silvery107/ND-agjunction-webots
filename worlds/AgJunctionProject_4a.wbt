@@ -1,0 +1,51 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      softERP 0.6
+      softCFM 1e-05
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.868409486271857 0.4718295919308116 0.15245261667630877 0.6433831400666118
+  position 81.37982708736297 44.647273408283155 138.47327786474852
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Kubota {
+  translation 52.44 6.37 82.92
+  rotation 0 1 0 1.5708
+  controller "test_controller"
+  sensorSlot [
+    Accelerometer {
+      translation 0.8 0 2.7
+    }
+    Accelerometer {
+      translation 0 0 3.2
+      name "accelerometer2"
+    }
+    Accelerometer {
+      translation 0 2.22 0.5
+      rotation -1 0 0 0.05
+      name "accelerometer3"
+    }
+    Accelerometer {
+      translation 0 -0.46 -0.5
+      rotation 1 0 0 0
+      name "accelerometer4"
+    }
+    GPS {
+    }
+    Gyro {
+    }
+    InertialUnit {
+    }
+  ]
+}
+UnevenTerrainGenerator {
+  map "experiment_field.png"
+}

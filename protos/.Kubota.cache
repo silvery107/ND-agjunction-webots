@@ -1,0 +1,11 @@
+Webots Proto Cache File version 1.5
+protoFileHash: 2e9b0a2262fd7c508f308781177c3805
+needsRobotAncestor: 1
+baseType: Robot
+slotType: 
+parameters: translation,rotation,name,controller,controllerArgs,suspensionFrontSpringConstant,suspensionFrontDampingConstant,suspensionCabSpringConstant,suspensionCabDampingConstant,wheelsDampingConstant,maxSteeringTorque,brakeCoefficient,engineMinRPM,engineMaxRPM,engineFunctionCoefficients,gearRatio,sensorSlot,physics
+tags: 
+license: 
+licenseUrl: 
+documentationUrl: 
+info: 

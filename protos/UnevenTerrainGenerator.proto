@@ -1,0 +1,62 @@
+#VRML_SIM 8.6.2 utf8
+#tags: static
+
+PROTO UnevenTerrainGenerator [
+  field SFVec3f     translation      0 0 0
+  field SFRotation  rotation         0 1 0 0
+  field SFString    name             "terrain"
+  field SFVec3f     size             100.0 5.0 100.0
+  field SFString    map              "map.png"
+  field MFString    texture          "textures/sand.jpg"
+  field SFString    contactMaterial  "default"
+]
+{
+  %{
+    local gd = require("gd")
+    local map = gd.createFromPng(fields.map.value)  -- Try to load the map absolute path.
+    if map == nil then
+      map = gd.createFromPng(context.project_path .. "/protos/" .. fields.map.value)  -- Try to load the map relatively to the PROTOs directory.
+    end
+    if map == nil then
+      io.stderr:write("Cannot load: " .. fields.map.value)
+      return
+    end
+    local sx, sz = map:sizeXY()
+  }%
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Shape {
+        appearance Appearance {
+          material Material {
+          }
+          texture ImageTexture {
+            url IS texture
+          }
+          textureTransform TextureTransform {
+            scale %{= sx }% %{= sz }%
+          }
+        }
+        geometry DEF EG ElevationGrid {
+          xSpacing %{= fields.size.value.x / sx }%
+          zSpacing %{= fields.size.value.z / sz }%
+          xDimension %{= sx }%
+          zDimension %{= sz }%
+          height [
+            %{ for i = 0, sx - 1 do }%
+              %{ for j = 0, sz - 1 do }%
+                %{ local pixel = map:getPixel(i, sz - j - 1) }%
+                %{ local alt = map:red(pixel) }%
+                %{= alt / 255.0 * fields.size.value.y }%
+              %{ end }%
+            %{ end }%
+          ]
+        }
+      }
+    ]
+    name IS name
+    contactMaterial IS contactMaterial
+    boundingObject USE EG
+  }
+}
