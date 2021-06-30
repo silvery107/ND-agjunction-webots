@@ -1,7 +1,5 @@
 # Controller Description
 
-![controller](images/controller.png)
-
 - [Controller Description](#controller-description)
   - [Driver Library Functions](#driver-library-functions)
   - [Keyboard](#keyboard)
