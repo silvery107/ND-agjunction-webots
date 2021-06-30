@@ -22,7 +22,8 @@
 ## Tractor PROTO
 
 This section describes fields of **Kubota** and **McCormick** proto.
-![tractors](images/tractor_proto.png)
+
+<img src=images/tractor_proto.png width=400>
 
 ### PROTO Field Summary
 
@@ -92,7 +93,7 @@ In addition to the usual tabs for each sensors/actuators, the robot-window's fir
 The following tabs give more detailed information about one specific state of the car (e.g. speed, steering angles, wheels encoders, etc.).
 After those specific tabs about vechile, you can find the usual tabs regarding sensors/actuators added in the sensors slots of the vechile.
 
-![robot window](images/overview_tab.png)
+<img src=images/overview_tab.png width=400>
 
 ## Sensor Slot
 
@@ -100,10 +101,10 @@ This section decribes fields of Accelerometer, GPS, Gyro and Inertial Unit which
 
 <div align=center>
 
-![accelerometer](images/Accelerometer.png)
-![gps](images/GPS.png)
-![gyro](images/Gyro.png)
-![inertial unit](images/InertialUnit.png)
+<img src=images/Accelerometer.png width=100>
+<img src=images/GPS.png width=100>
+<img src=images/Gyro.png width=100>
+<img src=images/InertialUnit.png width=100>
 
 </div>
 

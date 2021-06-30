@@ -48,4 +48,3 @@ This project is collaborated with ***SUSTech***, ***ND*** and ***AgJunction Inc*
   - [Accelerometer](./docs/controller_description.md#accelerometer)
   - [GPS](./docs/controller_description.md#gps)
   - [Robot](./docs/controller_description.md#robot)
-  - [Other functions](./docs/controller_description.md#other-functions)
