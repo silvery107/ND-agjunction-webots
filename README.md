@@ -2,7 +2,7 @@
 
 In this project, AgJunction requested “medium fidelity solid models” of the two tractors in their inventory (Kubota M7 and McCormick MTX120) to use for simulation, as an improvement to the previously-used rigid body model with perfect steering behavior. The new models were to account for suspension and steering factors not previously considered, and the visual renderings were to be made more reminiscent of the tractors in subject. 
 
-This project is collaborated with SUSTech, ND and AgJunction Inc. 
+This project is collaborated with ***SUSTech***, ***ND*** and ***AgJunction Inc***. 
 
 
 ## [Model Description](./docs/model_description.md)
